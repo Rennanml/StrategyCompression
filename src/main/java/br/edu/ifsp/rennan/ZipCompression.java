@@ -13,7 +13,7 @@ public class ZipCompression implements CompressionStrategy {
     public void compress(List<String> files, String outputFile) {
         try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(outputFile))) {
             for (String filePath : files) {
-                addToZip(filePath, zos);
+                addToZip(filePath, zos); // Real compression logic function
             }
             System.out.println("Compactação ZIP concluída: " + outputFile);
         } catch (IOException e) {

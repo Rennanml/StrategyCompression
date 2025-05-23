@@ -18,7 +18,7 @@ public class TarGzCompression implements CompressionStrategy {
             taos.setLongFileMode(TarArchiveOutputStream.LONGFILE_POSIX);
 
             for (String filePath : files) {
-                addToTarGz(taos, new File(filePath), "");
+                addToTarGz(taos, new File(filePath), ""); // Real compression logic function
             }
 
             System.out.println("Compactação TAR.GZ concluída: " + outputFile);

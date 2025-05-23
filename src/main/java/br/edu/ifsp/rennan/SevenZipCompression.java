@@ -13,7 +13,7 @@ public class SevenZipCompression implements CompressionStrategy {
     public void compress(List<String> files, String outputFile) {
         try (SevenZOutputFile sevenZOutput = new SevenZOutputFile(new File(outputFile))) {
             for (String filePath : files) {
-                addTo7z(filePath, sevenZOutput);
+                addTo7z(filePath, sevenZOutput); // Real compression logic function
             }
             System.out.println("Compactação 7Z concluída: " + outputFile);
         } catch (IOException e) {
